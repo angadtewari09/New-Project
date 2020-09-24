@@ -1,0 +1,133 @@
+.begin {
+  margin-top: 240px;
+  padding:40px;
+  transition: 0.5s;
+}
+.container {
+  display: none;
+}
+/*button play now styling*/
+.span {
+  display:flex;
+  justify-content: center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  box-shadow:10px 10px rgba(0 , 0 , 0 ,0.5);
+  border-radius:15px;
+  width: 200px;
+  outline:0;
+  text-align: center;
+  transition-duration: 0.1s;
+  text-decoration: none;
+
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*Ends here*/
+.main-area {
+  position: relative;
+  display: flex;
+  margin-bottom:5px;
+}
+.para {
+  margin-top: 8px;
+  margin-right: auto;
+  margin-left:auto;
+  text-align: center;
+  font-size:30px;
+  font-family: 'Asap', sans-serif;
+}
+#sample-text {
+  margin-top:0;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 40px;
+  padding-top:1px;
+}
+.player-box , .dealer-box {
+  position: relative;
+  display: flex;
+  padding:auto;
+  margin-left:5px;
+  margin-right: 5px;
+  height:500px;
+  width:50%;
+  border : 2px solid rgba(0, 0, 0 ,0.8);
+}
+
+#line1 {
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 60px;
+}
+
+.empty {
+    transition:  all ease-in 0.5s ;
+}
+.main-button {
+  border:2px solid black;
+  padding:25px;
+  width: auto;
+  text-align:center;
+  margin-left:5px;
+  margin-right:5px;
+  padding-bottom:35px;
+
+}
+
+.deal {
+  border: 2px solid;
+  padding:10px 15px;
+  margin:auto 15px;
+  border-radius: 15px;
+  font-weight: bolder;
+  cursor:pointer;
+  opacity:0.8;
+  box-shadow:3px 9px rgba(0, 0, 0 ,0.8);
+}
+.deal:hover {
+  opacity:1.0;
+}
+.deal:active {
+  transform: translateY(5px);
+  box-shadow: 0 5px #666;
+}
+#deal-1 {
+  background: red;
+  color:#fff;
+}
+#deal-2 {
+  background-color:#37f;
+  color:white;
+}
+#deal-3 {
+  background-color: green;
+  color:#fff;
+}
+.score-board {
+  margin: 5px;
+  padding:10px;
+  display: flex;
+  justify-content: center;
+}
+.score {
+  border:2px solid rgba(0, 0, 0 ,0.8);
+  text-align: center;
+  font-size:20px;
+}
+tr {
+  font-family: 'Asap' , sans-serif;
+  font-weight: bolder;
+}
+th , td {
+  padding:5px 15px;
+}
