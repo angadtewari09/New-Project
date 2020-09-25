@@ -3,6 +3,27 @@
   padding:40px;
   transition: 0.5s;
 }
+img {
+  display: block;
+  width: 40%;
+}
+#your-area {
+  display: inline-block;
+  text-align:center;
+}
+.size {
+  display: inline-flex;
+  flex-direction: row;
+  float: inherit;
+  justify-content: center;
+  height: auto;
+  width:20%;
+  padding: 1px;
+  border: 1px solid black ;
+  box-shadow: 8px 10px rgba(0 , 0 , 0 ,0.4);
+  border-radius: 5px;
+  margin:15px;
+}
 .container {
   display: none;
 }
@@ -55,7 +76,6 @@
 }
 .player-box , .dealer-box {
   position: relative;
-  display: flex;
   padding:auto;
   margin-left:5px;
   margin-right: 5px;
