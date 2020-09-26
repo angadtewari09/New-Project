@@ -13,6 +13,7 @@ $(document).ready(function(){
 function blackjack() {
     let player = 0;
     let dealer = 0;
+
     const stand_btn = document.getElementById("deal-2");
     const deal_btn = document.getElementById("deal-3");
     document.getElementById("deal-1").addEventListener('click' , function(){
@@ -24,6 +25,9 @@ function blackjack() {
         card.src = `${single}.png`;
         document.getElementById("your-area").appendChild(card);
        
+    });
+    document.getElementById("deal-3").addEventListener('click' , function(){
+        
     });
 }
 blackjack();

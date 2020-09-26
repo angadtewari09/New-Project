@@ -10,6 +10,8 @@ img {
 #your-area {
   display: inline-block;
   text-align:center;
+  overflow-y: scroll;
+  height: 400px;
 }
 .size {
   display: inline-flex;
@@ -79,8 +81,9 @@ img {
   padding:auto;
   margin-left:5px;
   margin-right: 5px;
-  min-height:500px;
-  max-height: auto;
+  height:550px;
+  /*min-height:500px;
+  max-height: auto;*/
   width:50%;
   border : 2px solid rgba(0, 0, 0 ,0.8);
 }
@@ -98,6 +101,7 @@ img {
   border:2px solid black;
   padding:25px;
   width: auto;
+  height: auto;
   text-align:center;
   margin-left:5px;
   margin-right:5px;
@@ -108,7 +112,7 @@ img {
 .deal {
   border: 2px solid;
   padding:10px 15px;
-  margin:auto 15px;
+  margin:15px 15px;
   border-radius: 15px;
   font-weight: bolder;
   cursor:pointer;
