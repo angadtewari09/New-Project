@@ -10,6 +10,13 @@ $(document).ready(function(){
     });
 });
 
+/*function updateScroll(){
+    if(!scrolled){
+        var element = document.getElementById("your-area");
+        element.scrollTop = element.scrollHeight;
+    }
+}*/
+
 function blackjack() {
     let player = 0;
     let dealer = 0;
@@ -24,6 +31,9 @@ function blackjack() {
         card.classList.add("size");
         card.src = `${single}.png`;
         document.getElementById("your-area").appendChild(card);
+        /*jquery for automatic scroll*/
+        $('#your-area').animate({
+            scrollTop: $('#your-area').get(0).scrollHeight}, 200); 
        
     });
     document.getElementById("deal-3").addEventListener('click' , function(){

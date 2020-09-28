@@ -10,7 +10,8 @@ img {
 #your-area {
   display: inline-block;
   text-align:center;
-  overflow-y: scroll;
+  overflow-x:hidden;
+  overflow-y: visible;
   height: 400px;
 }
 .size {
