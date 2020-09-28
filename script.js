@@ -31,6 +31,7 @@ function blackjack() {
         card.classList.add("size");
         card.src = `${single}.png`;
         document.getElementById("your-area").appendChild(card);
+        card.style.animation = "jerk 0.5s ease";
         /*jquery for automatic scroll*/
         $('#your-area').animate({
             scrollTop: $('#your-area').get(0).scrollHeight}, 200); 
