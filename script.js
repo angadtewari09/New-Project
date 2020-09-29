@@ -45,7 +45,12 @@ function blackjack() {
          }   
          else if ( single === 'A' )
         {
-            player_score = player_score + 11;
+                if( (player_score + 11) > 21)  {
+                    player_score = player_score + 1;
+                }
+                else {
+                    player_score = player_score + 11;
+                }
         }  
         else {
             player_score = player_score + single;
