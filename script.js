@@ -21,10 +21,12 @@ function blackjack() {
     let player = 0;
     let dealer = 0;
     var player_score = 0;
+    var dealer_score = 0;
 
     const stand_btn = document.getElementById("deal-2");
     const deal_btn = document.getElementById("deal-3");
     document.getElementById("deal-1").addEventListener('click' , function(){
+        var iter = 0;
         var deck = [ 2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
         var single = deck[Math.floor(Math.random()*deck.length)];
         console.log(single);
@@ -35,7 +37,9 @@ function blackjack() {
         card.style.animation = "flipping 0.5s ease";
         /*jquery for automatic scroll*/
         $('#your-area').animate({
-            scrollTop: $('#your-area').get(0).scrollHeight}, 200); 
+            scrollTop: $('#your-area').get(0).scrollHeight}, 200);
+        iter += 1;
+        console.log(`no of iteration${inter}`);
        
          /*matching the player-score*/
         
@@ -59,13 +63,21 @@ function blackjack() {
         document.getElementById("player-score").innerHTML = player_score;
     });
     document.getElementById("deal-3").addEventListener('click' , function(){
-        var resetimage = document.getElementById("your-area").querySelectorAll('img');
-        for( i=0; i< resetimage.length; i++)  {
-            resetimage[i].remove();
+        var resetimage_player = document.getElementById("your-area").querySelectorAll('img');
+        for( i=0; i< resetimage_player.length; i++)  {
+            resetimage_player[i].remove();
             player_score = 0;
             document.getElementById("player-score").innerHTML = 0;   
         }
-  
+        for( i=0; i< resetimage_dealer.length; i++)  {
+            resetimage_dealer[i].remove();
+            dealer_score = 0;
+            document.getElementById("dealer-score").innerHTML = 0;   
+        }
+    });
+    document.getElementById("deal-2").addEventListener('click' , function(){
+        var i = 0;
+        while()
     });
 }
 blackjack();

@@ -197,3 +197,22 @@ tr {
 th , td {
   padding:5px 15px;
 }
+/*adding media querry */
+@media(max-width:720px)
+{
+  .begin {
+    margin-top: 100px;
+  }
+}
+@media(max-width:522px)
+{
+  .begin {
+    margin-top: 40px;
+  }
+}
+@media(max-width:400px)
+{
+  .begin {
+    margin-top: 10px;
+  }
+}
