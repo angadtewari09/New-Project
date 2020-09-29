@@ -20,6 +20,7 @@ $(document).ready(function(){
 function blackjack() {
     let player = 0;
     let dealer = 0;
+    var player_score = 0;
 
     const stand_btn = document.getElementById("deal-2");
     const deal_btn = document.getElementById("deal-3");
@@ -37,7 +38,7 @@ function blackjack() {
             scrollTop: $('#your-area').get(0).scrollHeight}, 200); 
        
          /*matching the player-score*/
-         var player_score = 0;
+        
          if( (single === 'Q') || (single === 'J')  || (single === 'K')  )
          {
             player_score = player_score +  10 ;
@@ -49,7 +50,8 @@ function blackjack() {
         else {
             player_score = player_score + single;
         }
-        console.log(player_score);
+        console.log(`playerscore ${player_score}`);
+        document.getElementById("player-score").innerHTML = player_score;
     });
     /*document.getElementById("deal-3").addEventListener('click' , function(){
         
