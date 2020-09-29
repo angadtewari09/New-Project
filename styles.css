@@ -32,6 +32,19 @@ img {
   100% { transform: rotateY(360deg);}
   
 }
+@keyframes fade {
+  0% { opacity: 1.0; }
+  10% { opacity: 0.9; }
+  20% { opacity: 0.8; }
+  30% { opacity:0.7;}
+  40% { opacity:0.6;}
+  50% { opacity: 0.5;}
+  60% { opacity: 0.4;}
+  70% { opacity: 0.3;}
+  80% { opacity: 0.2;}
+  90% { opacity: 0.1;}
+  100% { opacity: 0.0;;}
+}
 /*test*/
 
 #your-area {
@@ -81,7 +94,7 @@ img {
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  : translateY(4px);
 }
 /*Ends here*/
 .main-area {

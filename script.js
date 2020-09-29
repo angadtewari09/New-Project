@@ -57,8 +57,10 @@ function blackjack() {
         var resetimage = document.getElementById("your-area").querySelectorAll('img');
         for( i=0; i< resetimage.length; i++)  {
             resetimage[i].remove();
-        document.getElementById("player-score").innerHTML = 0;    
+            player_score = 0;
+            document.getElementById("player-score").innerHTML = 0;   
         }
+  
     });
 }
 blackjack();
