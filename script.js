@@ -36,9 +36,11 @@ function blackjack() {
         $('#your-area').animate({
             scrollTop: $('#your-area').get(0).scrollHeight}, 200); 
        
+         /*matching the player-score*/
+         let playe_score = document.   
     });
-    document.getElementById("deal-3").addEventListener('click' , function(){
+    /*document.getElementById("deal-3").addEventListener('click' , function(){
         
-    });
+    });*/
 }
 blackjack();
