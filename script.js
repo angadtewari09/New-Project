@@ -53,8 +53,12 @@ function blackjack() {
         console.log(`playerscore ${player_score}`);
         document.getElementById("player-score").innerHTML = player_score;
     });
-    /*document.getElementById("deal-3").addEventListener('click' , function(){
-        
-    });*/
+    document.getElementById("deal-3").addEventListener('click' , function(){
+        var resetimage = document.getElementById("your-area").querySelectorAll('img');
+        for( i=0; i< resetimage.length; i++)  {
+            resetimage[i].remove();
+        document.getElementById("player-score").innerHTML = 0;    
+        }
+    });
 }
 blackjack();
