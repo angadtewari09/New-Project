@@ -22,11 +22,11 @@ function blackjack() {
     let dealer = 0;
     var player_score = 0;
     var dealer_score = 0;
-
+    var iter = 0;
     const stand_btn = document.getElementById("deal-2");
     const deal_btn = document.getElementById("deal-3");
     document.getElementById("deal-1").addEventListener('click' , function(){
-        var iter = 0;
+        
         var deck = [ 2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
         var single = deck[Math.floor(Math.random()*deck.length)];
         console.log(single);
@@ -39,7 +39,7 @@ function blackjack() {
         $('#your-area').animate({
             scrollTop: $('#your-area').get(0).scrollHeight}, 200);
         iter += 1;
-        console.log(`no of iteration${inter}`);
+        console.log(`no of iteration${iter}`);
        
          /*matching the player-score*/
         
@@ -77,7 +77,7 @@ function blackjack() {
     });
     document.getElementById("deal-2").addEventListener('click' , function(){
         var i = 0;
-        while()
+        /*while()*/
     });
 }
 blackjack();
