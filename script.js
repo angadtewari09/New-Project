@@ -77,12 +77,17 @@ function blackjack() {
     document.getElementById("deal-3").addEventListener('click' , function() {
         document.getElementById("dealer-score").style.color = "black";
         document.getElementById("player-score").style.color = "black";
+       
+        //To clear the player side area
         var resetimage_player = document.getElementById("your-area").querySelectorAll('img');
         for( i=0; i< resetimage_player.length; i++)  {
             resetimage_player[i].remove();
             player_score = 0;
             document.getElementById("player-score").innerHTML = 0;   
         }
+        
+        //To clear the dealer side area.
+        var resetimage_dealer = document.getElementById("dealer-area").querySelectorAll('img');
         for( i=0; i< resetimage_dealer.length; i++)  {
             resetimage_dealer[i].remove();
             dealer_score = 0;
