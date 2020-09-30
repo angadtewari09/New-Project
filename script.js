@@ -75,6 +75,9 @@ function blackjack() {
 
         /*Deal button logic*/
     document.getElementById("deal-3").addEventListener('click' , function() {
+
+        winnercalc(player_score , dealer_score);
+
         document.getElementById("dealer-score").style.color = "black";
         document.getElementById("player-score").style.color = "black";
        
@@ -93,6 +96,7 @@ function blackjack() {
             dealer_score = 0;
             document.getElementById("dealer-score").innerHTML = 0;   
         }
+
     });
 
     /*Stand button logic starts here*/ 
@@ -143,7 +147,33 @@ function blackjack() {
              }, 80);
            
         }
-
+       
     });
+    
+}
+function winnercalc( player_score, dealer_score )  {
+    var winner ;
+    if( player_score <= 21) {
+        
+        if( (player_score > dealer_score) || (dealer_score > 21) )  {
+            console.log(`Player Wins!`);
+            winner = "Player";
+        }
+        else if(player_score < dealer_score) {
+            console.log(`Player Loses!`);
+            winner = "Dealer";
+        }
+        else if( player_score === dealer_score )  {
+            console.log(`Game Tie!`);
+        }
+    } else if ((player_score > 21) && (dealer_score <= 21))  {
+        console.log(`Player Loses!`);
+        winner = "Dealer";
+    }
+    else if ((player_score > 21) && (dealer_score > 21)) {
+        console.log(`Game drew!`);
+    }
+    console.log(`Winner is ${winner}`);
+    return winner;
 }
 blackjack();
