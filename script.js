@@ -94,44 +94,44 @@ function blackjack() {
     document.getElementById("deal-2").addEventListener('click' , function(){
         var i = 0;
         //while()
-        if(player_score <=21)  {
-            var deck = [ 2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
-            var single = deck[Math.floor(Math.random()*deck.length)];
-            console.log(single);
-            let card = document.createElement('img');
-            card.classList.add("size");
-            card.src = `${single}.png`;
-            document.getElementById("your-area").appendChild(card);
-            card.style.animation = "flipping 0.5s ease";
+        if(dealer_score <=21)  {
+            var deck_d = [ 2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
+            var single_d = deck_d[Math.floor(Math.random()*deck_d.length)];
+            console.log(`Dealer choice ${single_d}`);
+            let card_d = document.createElement('img');
+            card_d.classList.add("size");
+            card_d.src = `${single_d}.png`;
+            document.getElementById("dealer-area").appendChild(card_d);
+            card_d.style.animation = "flipping 0.5s ease";
             /*jquery for automatic scroll*/
-            $('#your-area').animate({
-                scrollTop: $('#your-area').get(0).scrollHeight}, 200);
-            iter += 1;
-            console.log(`no of iteration${iter}`);
+            $('#dealer-area').animate({
+                scrollTop: $('#dealer-area').get(0).scrollHeight}, 200);
+            /*iter += 1;
+            console.log(`no of iteration ${iter}`);*/
            
              /*matching the player-score*/
             
-             if( (single === 'Q') || (single === 'J')  || (single === 'K')  )
+             if( (single_d === 'Q') || (single_d === 'J')  || (single_d === 'K')  )
              {
-                player_score = player_score +  10 ;
+                dealer_score = dealer_score +  10 ;
              }   
-             else if ( single === 'A' )
+             else if ( single_d === 'A' )
             {
-                    if( (player_score + 11) > 21)  {
-                        player_score = player_score + 1;
+                    if( ( dealer_score + 11) > 21)  {
+                        dealer_score = dealer_score + 1;
                     }
                     else {
-                        player_score = player_score + 11;
+                        dealer_score = dealer_score + 11;
                     }
             }  
             else {
-                player_score = player_score + single;
+                dealer_score = dealer_score + single_d;
             }
-            console.log(`playerscore ${player_score}`);
-            setTimeout(function(){ document.getElementById("player-score").innerHTML = player_score; }, 60);
+            console.log(`playerscore ${dealer_score}`);
+            setTimeout(function(){ document.getElementById("dealer-score").innerHTML = dealer_score; }, 60);
             
         }
-        if(player_score >21)  {
+        if(dealer_score >21)  {
             setTimeout(function(){ 
                 document.getElementById("dealer-score").innerHTML = "BUST!"
                 document.getElementById("dealer-score").style.color = "red"

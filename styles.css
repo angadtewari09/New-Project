@@ -54,6 +54,14 @@ img {
   overflow-y: visible;
   height: 400px;
 }
+#dealer-area {
+  display: inline-block;
+  text-align:center;
+  overflow-x:hidden;
+  overflow-y: visible;
+  height: 400px;
+}
+
 .size {
   display: inline-flex;
   flex-direction: row;
