@@ -181,12 +181,16 @@ function DisplayResult(winenr)  {
 
     if( winner === "Player" )  {
         display_text = "Player Wins!";
+        text_color = "green";
     }
     else if( winner === "Dealer" )  {
         display_text = "Dealer Wins!";
+        text_color = "red";
     }
     else  {
-
+        display_text = "You drew!";
+        text_color = "black";
     }
+    document.getElementById("sample-text").
 }
 blackjack();
