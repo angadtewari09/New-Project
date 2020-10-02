@@ -81,6 +81,7 @@ function blackjack() {
         DisplayResult(winnercalc(player_score , dealer_score));*/
         document.getElementById("dealer-score").style.color = "black";
         document.getElementById("player-score").style.color = "black";
+        document.getElementById("sample-text").innerHTML = "Sample text";
        
         //To clear the player side area
         var resetimage_player = document.getElementById("your-area").querySelectorAll('img');
@@ -151,7 +152,7 @@ function blackjack() {
         }
         if( dealer_score >=16 )  {
             /*winnercalc(player_score , dealer_score);*/
-            console.log(`this is working `);
+            console.log(`this is working`);
             DisplayResult(winnercalc(player_score , dealer_score));
         }
        
