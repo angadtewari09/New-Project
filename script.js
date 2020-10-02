@@ -176,4 +176,17 @@ function winnercalc( player_score, dealer_score )  {
     console.log(`Winner is ${winner}`);
     return winner;
 }
+function DisplayResult(winenr)  {
+    var display_text , text_color ;
+
+    if( winner === "Player" )  {
+        display_text = "Player Wins!";
+    }
+    else if( winner === "Dealer" )  {
+        display_text = "Dealer Wins!";
+    }
+    else  {
+
+    }
+}
 blackjack();
