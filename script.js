@@ -191,6 +191,7 @@ function DisplayResult(winenr)  {
         display_text = "You drew!";
         text_color = "black";
     }
-    document.getElementById("sample-text").
+    document.getElementById("sample-text").innerHTML = display_text;
+    document.getElementById("sample-text").style.color = text_color;
 }
 blackjack();
