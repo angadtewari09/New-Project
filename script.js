@@ -76,8 +76,9 @@ function blackjack() {
         /*Deal button logic*/
     document.getElementById("deal-3").addEventListener('click' , function() {
 
-        winnercalc(player_score , dealer_score);
 
+        /*winnercalc(player_score , dealer_score);
+        DisplayResult(winnercalc(player_score , dealer_score));*/
         document.getElementById("dealer-score").style.color = "black";
         document.getElementById("player-score").style.color = "black";
        
@@ -96,6 +97,7 @@ function blackjack() {
             dealer_score = 0;
             document.getElementById("dealer-score").innerHTML = 0;   
         }
+       
 
     });
 
@@ -147,10 +149,20 @@ function blackjack() {
              }, 80);
            
         }
+        if( dealer_score >=16 )  {
+            /*winnercalc(player_score , dealer_score);*/
+            console.log(`this is working `);
+            DisplayResult(winnercalc(player_score , dealer_score));
+        }
        
     });
+   /* auto_touch(player_score , dealer_score);*/
     
 }
+/*function auto_touch(player_score , dealer_score)  {
+    }
+}*/
+
 function winnercalc( player_score, dealer_score )  {
     var winner ;
     if( player_score <= 21) {
@@ -158,10 +170,14 @@ function winnercalc( player_score, dealer_score )  {
         if( (player_score > dealer_score) || (dealer_score > 21) )  {
             console.log(`Player Wins!`);
             winner = "Player";
+            console.log(`Winner is ${winner}`);
+            return winner;
         }
         else if(player_score < dealer_score) {
             console.log(`Player Loses!`);
             winner = "Dealer";
+            console.log(`Winner is ${winner}`);
+            return winner;
         }
         else if( player_score === dealer_score )  {
             console.log(`Game Tie!`);
@@ -169,16 +185,18 @@ function winnercalc( player_score, dealer_score )  {
     } else if ((player_score > 21) && (dealer_score <= 21))  {
         console.log(`Player Loses!`);
         winner = "Dealer";
+        console.log(`Winner is ${winner}`);
+        return winner;
     }
     else if ((player_score > 21) && (dealer_score > 21)) {
         console.log(`Game drew!`);
     }
-    console.log(`Winner is ${winner}`);
-    return winner;
+    
 }
-function DisplayResult(winenr)  {
-    var display_text , text_color ;
 
+function DisplayResult(winner)  {
+    var display_text , text_color ;
+    let w = 1 , l = 1 , d = 1;
     if( winner === "Player" )  {
         display_text = "Player Wins!";
         text_color = "green";
@@ -187,11 +205,24 @@ function DisplayResult(winenr)  {
         display_text = "Dealer Wins!";
         text_color = "red";
     }
-    else  {
+    else   {
         display_text = "You drew!";
         text_color = "black";
     }
     document.getElementById("sample-text").innerHTML = display_text;
     document.getElementById("sample-text").style.color = text_color;
+
+    if( display_text === "Player Wins!" )  {
+        document.getElementById("wins").innerHTML = w;
+        w = w+1;
+    }
+    else if( display_text === "Dealer Wins!" )  {
+        document.getElementById("loses").innerHTML = l;
+        l=l+1;
+    }
+    else {
+        document.getElementById("draw").innerHTML = d;
+        d=d+1;
+    }
 }
 blackjack();

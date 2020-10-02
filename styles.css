@@ -119,8 +119,8 @@ img {
   font-family: 'Asap', sans-serif;
 }
 #sample-text {
-  margin-top:0;
-  text-align: center;
+  display:flex;
+  justify-content: center;
   font-family: 'Alata', sans-serif;
   font-size: 40px;
   padding-top:1px;
